@@ -93,7 +93,7 @@ aws lambda publish-layer-version \
 ```bash
 aws lambda publish-layer-version \
     --layer-name PHP-example-runtime \
-    --zip-file fileb://venndor.zip \
+    --zip-file fileb://vendor.zip \
     --region eu-west-1
 ```
 2.	Make note of each command’s LayerVersionArn output value (for example `arn:aws:lambda:eu-west-1:XXXXXXXXXXXX:layer:PHP-example-runtime:1`). You will use this to add the Layers to your PHP Lambda functions.
