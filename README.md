@@ -75,7 +75,7 @@ curl -sS https://getcomposer.org/installer | ./bin/php
 ```bash
 ./bin/php composer.phar require guzzlehttp/guzzle
 ```
-3. Package the dependancies into a `zendor.zip` binary
+3. Package the dependancies into a `vendor.zip` binary
 ```bash
 zip -r vendor.zip vendor/
 ```
