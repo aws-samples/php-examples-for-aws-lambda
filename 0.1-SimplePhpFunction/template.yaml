@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: My Simple php Lambda function
+Transform: AWS::Serverless-2016-10-31
+
+Description: >
+  0.1 - a simple php Lambda function with API Gateway invocation
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+
+  PHPHelloFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: PHP hello example
+      CodeUri: src/
+      Runtime: provided
+      Handler: index
+      MemorySize: 1024
+      Timeout: 30
+      Tracing: Active
+      Layers:
+        - !Sub arn:aws:lambda:eu-west-1:981723798357:layer:php-example-runtime:3
+        - !Sub arn:aws:lambda:eu-west-1:981723798357:layer:php-example-vendor:1
+      Events:
+        api:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
