@@ -92,7 +92,7 @@ aws lambda publish-layer-version \
 
 ```bash
 aws lambda publish-layer-version \
-    --layer-name PHP-example-runtime \
+    --layer-name PHP-example-vendor \
     --zip-file fileb://vendor.zip \
     --region eu-west-1
 ```
