@@ -106,7 +106,7 @@ aws lambda publish-layer-version \
 
 ## Resources
 ### AWS Blog posts & documentation
-* Blog Post 1
+* https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/
 * https://aws.amazon.com/blogs/apn/aws-lambda-custom-runtime-for-php-a-practical-example/
 * https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html
 
