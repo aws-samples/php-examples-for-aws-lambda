@@ -1,4 +1,4 @@
-# The Serverless LAMP stack  - Resources
+# The Serverless LAMP stack  - Community Resources
 > A community curated list of PHP / Serverless resources (videos, blogs, code examples frameworks, events).
 
 ![The Serverless LAMP stack](repository-resources/serverless-lamp-stack.png "The Serverless LAMP stack")
