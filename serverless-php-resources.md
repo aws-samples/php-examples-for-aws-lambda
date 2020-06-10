@@ -88,5 +88,5 @@ Please ensure your pull request adheres to the following guidelines:
 ---
 
 ## License
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
 
+This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more info.
