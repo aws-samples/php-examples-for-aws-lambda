@@ -6,6 +6,9 @@
 - [0.1-SimplePhpFunction](https://github.com/bls20AWS/serverelss-php/tree/master/0.1-SimplePhpFunction) a very simple implementation of a PHP Lambda function. This uses a custom rumtime bootstrap and vendor dependancies as layers.
 
 
+## Community Curated PHP / Serverless resources ##
+
+> [serverless-php-resources.md](/serverless-php-resources.md) - A community curated list of PHP / Serverless resources (videos, blogs, code examples frameworks, events). 
 
 
 ## Creating your custom PHP runtime ##
