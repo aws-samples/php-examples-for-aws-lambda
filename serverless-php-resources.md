@@ -17,6 +17,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["AWS Lambda With PHP Using Bref And Serverless Framework"](https://www.nexmo.com/blog/2020/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr) - *Adam Culp*
 - ["Compiling wkhtmltopdf for use inside an AWS Lambda function with Bref is easier than you'd think"](https://tech.mybuilder.com/compiling-wkhtmltopdf-aws-lambda-with-bref-easier-than-you-think/) - *Neal Brooks*
 - ["Deploying Laravel Artisan on AWS Lambda"](https://blog.deleu.dev/deploying-laravel-artisan-on-aws-lambda/) - *Marco Aurélio Deleu*
+- ["Deploy Static Frontend + PHP Files Using ZEIT Now"](https://dev.to/nx1/deploy-static-frontend-php-files-using-zeit-now-mg) - *Milan Felix Šulc*
 - ["Going serverless with PHP"](https://medium.com/php-fad/going-serverless-with-php-f5a67cb3d67b) - *Kpicaza*
 - ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) - *Benjamin Smith*
 - ["PHPUnit with Bref"](https://blog.deleu.dev/phpunit-with-bref/) - *Marco Aurélio Deleu*
