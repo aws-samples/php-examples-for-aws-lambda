@@ -28,7 +28,6 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["What is AWS Lambda, and how Laravel Vapor uses it"](https://dev.to/themsaid/what-is-aws-lambda-and-how-laravel-vapor-uses-it-1j98) - *Mohamed Said*
 
 
-
 ## Case studies
 - ["From LAMP to serverless: case study of externals.io"](https://mnapoli.fr/serverless-case-study-externals/) - *Matthieu Napoli*
 - ["How Serverless Saved Us For $2"](https://devops-life.com/blog/2020/03/06/how-serverless-saved-us-for-$2-with-bref-sh/) - *Tristan Bessoussa*
@@ -60,6 +59,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Examples of PHP applications built with Bref"](https://github.com/brefphp/examples) - *brefphp community*
 - ["Package to use Laravel on AWS Lambda with Bref"](https://github.com/brefphp/laravel-bridge) - *brefphp community*
 - ["Small library to write good Lambda hooks"](https://github.com/Happyr/bref-hook-handler) - *Tobias Nyholm*
+- ["Vercel PHP runtime"](https://github.com/juicyfx/now-php) - *Milan Felix Šulc*
 
 
 ## Events
