@@ -63,6 +63,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Examples of PHP applications built with Bref"](https://github.com/brefphp/examples) - *brefphp community*
 - ["Package to use Laravel on AWS Lambda with Bref"](https://github.com/brefphp/laravel-bridge) - *brefphp community*
 - ["Small library to write good Lambda hooks"](https://github.com/Happyr/bref-hook-handler) - *Tobias Nyholm*
+- ["Vercel PHP runtime"](https://github.com/juicyfx/now-php) - *Milan Felix Šulc*
 
 
 ## Events
