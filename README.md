@@ -17,7 +17,9 @@ Follow the instructions below to create Lambda layers to hold your PHP custom ru
 ### Compiling PHP ###
 :information_source: PHP 7.3.0 has been used for this example.
 
-To create a custom runtime, you must first compile the required version of PHP in an Amazon Linux environment compatible with the [Lambda execution environment](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html). 
+To create a custom runtime, you must first compile the required version of PHP in an Amazon Linux environment compatible with the [Lambda execution environment](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html).
+
+An easy way to accomplish this is using Cloud9 on Amazon linux.
 
 Compile PHP by running the following commands:
 
@@ -34,13 +36,13 @@ cd openssl-1.0.1k
 cd ~
 
 # Download the PHP 7.3.0 source
-mkdir ~/php-7-bin
+mkdir -p ~/environment/php-7-bin
 curl -sL https://github.com/php/php-src/archive/php-7.3.0.tar.gz | tar -xvz
 cd php-src-php-7.3.0
 
 # Compile PHP 7.3.0 with OpenSSL 1.0.1 support, and install to /home/ec2-user/php-7-bin
 ./buildconf --force
-./configure --prefix=/home/ec2-user/php-7-bin/ --with-openssl=/usr/local/ssl --with-curl --with-zlib
+./configure --prefix=/home/ec2-user/environment/php-7-bin/ --with-openssl=/usr/local/ssl --with-curl --with-zlib
 make install
 ```
 
@@ -55,6 +57,13 @@ make install
 |  +-- bin/
 |  |   +-- php*
 </pre>
+
+```
+cd /home/ec2-user/environment/php-7-bin
+wget https://raw.githubusercontent.com/aws-samples/php-examples-for-aws-lambda/master/bootstrap
+# make executable
+chmod +x bootstrap
+```
 
 2. Package the PHP binary and bootstrap file together into a file named `runtime.zip`:
 
@@ -100,7 +109,6 @@ aws lambda publish-layer-version \
     --region eu-west-1
 ```
 2.	Make note of each command’s LayerVersionArn output value (for example `arn:aws:lambda:eu-west-1:XXXXXXXXXXXX:layer:PHP-example-runtime:1`). You will use this to add the Layers to your PHP Lambda functions.
-
 
 
 
