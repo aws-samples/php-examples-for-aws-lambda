@@ -3,7 +3,7 @@
 ![The Serverless LAMP stack](repository-resources/serverless-lamp-stack.png "The Serverless LAMP stack")
 
 ## Examples ##
-- [0.1-SimplePhpFunction](https://github.com/bls20AWS/serverelss-php/tree/master/0.1-SimplePhpFunction) a very simple implementation of a PHP Lambda function. This uses a custom rumtime bootstrap and vendor dependancies as layers.
+- [0.1-SimplePhpFunction](https://github.com/bls20AWS/serverelss-php/tree/master/0.1-SimplePhpFunction) a very simple implementation of a PHP Lambda function. This uses a custom rumtime bootstrap and vendor dependencies as layers.
 
 
 ## Community Curated PHP / Serverless resources ##
@@ -12,7 +12,7 @@
 
 
 ## Creating your custom PHP runtime ##
-Follow the instructions below to create Lambda layers to hold your PHP custom runtime and library dependancies. Include these layers in your PHP Lambda functions with the Lambda runtime set to `provided`.
+Follow the instructions below to create Lambda layers to hold your PHP custom runtime and library dependencies. Include these layers in your PHP Lambda functions with the Lambda runtime set to `provided`.
 
 ### Compiling PHP ###
 :information_source: PHP 7.3.0 has been used for this example.
@@ -64,7 +64,7 @@ zip -r runtime.zip bin bootstrap
 
 :information_source: <font size="2">Consult the [Runtime API documentation](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html) as you build your own production custom runtimes to ensure that you’re handling all eventualities as gracefully as possible.</font>
 
-### Creating dependancies ###
+### Creating dependencies ###
 
 [This bootstrap file](/bootstrap) uses [Guzzle](https://github.com/guzzle/guzzle), a popular PHP HTTP client, to make requests to the custom runtime API.  The Guzzle package is installed using [Composer package manager](https://getcomposer.org/).
 
@@ -78,7 +78,7 @@ curl -sS https://getcomposer.org/installer | ./bin/php
 ```bash
 ./bin/php composer.phar require guzzlehttp/guzzle
 ```
-3. Package the dependancies into a `vendor.zip` binary
+3. Package the dependencies into a `vendor.zip` binary
 ```bash
 zip -r vendor.zip vendor/
 ```
