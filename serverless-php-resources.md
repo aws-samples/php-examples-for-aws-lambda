@@ -15,8 +15,11 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 
 - ["Authenticating AWS Cognito with Laravel"](https://blog.deleu.dev/authenticating-aws-cognito-with-laravel/) - *Marco Aurélio Deleu*
 - ["AWS Lambda With PHP Using Bref And Serverless Framework"](https://www.nexmo.com/blog/2020/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr) - *Adam Culp*
+- ["Bleeding Edge PHP on ZEIT Now"](https://dev.to/nx1/bleeding-edge-php-on-zeit-now-565g) - *Milan Felix Šulc*
 - ["Compiling wkhtmltopdf for use inside an AWS Lambda function with Bref is easier than you'd think"](https://tech.mybuilder.com/compiling-wkhtmltopdf-aws-lambda-with-bref-easier-than-you-think/) - *Neal Brooks*
 - ["Deploying Laravel Artisan on AWS Lambda"](https://blog.deleu.dev/deploying-laravel-artisan-on-aws-lambda/) - *Marco Aurélio Deleu*
+- ["Deploy Static Frontend + PHP Files Using ZEIT Now"](https://dev.to/nx1/deploy-static-frontend-php-files-using-zeit-now-mg) - *Milan Felix Šulc*
+- ["Going serverless with PHP"](https://medium.com/php-fad/going-serverless-with-php-f5a67cb3d67b) - *Kpicaza*
 - ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) - *Benjamin Smith*
 - ["PHPUnit with Bref"](https://blog.deleu.dev/phpunit-with-bref/) - *Marco Aurélio Deleu*
 - ["Responding to SMS in PHP using AWS Lambda and Bref"](https://www.twilio.com/blog/responding-to-sms-in-php-using-aws-lambda-and-bref-php) - *Gary Hockin*
@@ -60,6 +63,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Examples of PHP applications built with Bref"](https://github.com/brefphp/examples) - *brefphp community*
 - ["Package to use Laravel on AWS Lambda with Bref"](https://github.com/brefphp/laravel-bridge) - *brefphp community*
 - ["Small library to write good Lambda hooks"](https://github.com/Happyr/bref-hook-handler) - *Tobias Nyholm*
+- ["Vercel PHP runtime"](https://github.com/juicyfx/now-php) - *Milan Felix Šulc*
 
 
 ## Events
