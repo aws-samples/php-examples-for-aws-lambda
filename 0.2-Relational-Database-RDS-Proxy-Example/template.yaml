@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: My Simple php Lambda function
+Transform: AWS::Serverless-2016-10-31
+
+Description: >
+  0.2 - a simple php Lambda function that connects to an RDS database via RDS Proxy
+  
+##########################################################################
+#  Parameters & Globals                                                  #
+##########################################################################
+Parameters:
+  SecurityGroupIds:
+    Type: CommaDelimitedList
+    Description: Existing VPC security groups ID's that your Amazon RDS Aurora databse has access to. Separated by commas.
+  SubnetIds:
+    Type: CommaDelimitedList
+    Description: An array of SubnetIds that your Amazon Aurora database has acces to. Separated by commas.
+  proxyHost:
+    Type: String
+    Description: The Endpoint of your RDS Proxy
+  username:
+    Type: String
+    Description: The connection Username for your DB or Cluster
+  db:
+    Type: String
+    Description: The Name of your Database instance
+    Default: mysql
+  port:
+    Type: String
+    Description: Connection port number for your RDS Proxy
+    Default: 3306
+  region:
+    Type: String
+    Description: The AWS Region for your DB Proxy
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+##########################################################################
+#  Lambda function with PHP runtime provided by layers                   #
+##########################################################################
+  PHPMySQLConnectFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: PHP hello example
+      CodeUri: src/
+      Runtime: provided
+      Handler: index
+      MemorySize: 1024
+      Timeout: 30
+      Tracing: Active
+      Environment:
+        Variables:
+          proxyHost: !Ref proxyHost
+          username: !Ref username
+          db: !Ref db
+          port: !Ref port
+          region: !Ref region
+      Layers:
+        - !Sub arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-runtime:8
+        - !Sub arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-vendor:2
+      VpcConfig:
+        SecurityGroupIds: !Ref SecurityGroupIds
+        SubnetIds: !Ref SubnetIds
