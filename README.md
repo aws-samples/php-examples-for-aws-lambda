@@ -3,9 +3,9 @@
 ![The Serverless LAMP stack](repository-resources/serverless-lamp-stack.png "The Serverless LAMP stack")
 
 ## Examples ##
-- [0.1-SimplePhpFunction](https://github.com/bls20AWS/serverelss-php/tree/master/0.1-SimplePhpFunction) A very simple implementation of a PHP Lambda function. This uses a custom rumtime bootstrap and vendor dependencies as layers.
+- [0.1-SimplePhpFunction](https://github.com/aws-samples/php-examples-for-aws-lambda/tree/master/0.1-SimplePhpFunction) A very simple implementation of a PHP Lambda function. This uses a custom rumtime bootstrap and vendor dependencies as layers.
 
-- [0.2-Relational-Database-RDS-Proxy-Example](https://github.com/bls20AWS/serverelss-php/tree/master/0.2-Relational-Database-RDS-Proxy-Example) A PHP Lambda function that connects to an Aurora MySQL database using Amazon RDS PRoxy.
+- [0.2-Relational-Database-RDS-Proxy-Example](https://github.com/aws-samples/php-examples-for-aws-lambda/tree/master/0.2-Relational-Database-RDS-Proxy-Examplee) A PHP Lambda function that connects to an Aurora MySQL database using Amazon RDS PRoxy.
 
 
 ## Community Curated PHP / Serverless resources ##
