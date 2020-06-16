@@ -133,10 +133,10 @@ aws rds create-db-proxy \
 --engine-family MYSQL \
 --auth '{
         "AuthScheme": "SECRETS",
-        "SecretArn": "arn:aws:secretsmanager:eu-west-1:981723798357:secret:exampleAuroraRDSsecret1-DyCOcC",
+        "SecretArn": "arn:aws:secretsmanager:eu-west-1:0123456:secret:exampleAuroraRDSsecret1-DyCOcC",
          "IAMAuth": "REQUIRED"
       }' \
---role-arn arn:aws:iam::981723798357:role/my-rds-proxy-sample-role \
+--role-arn arn:aws:iam::0123456:role/my-rds-proxy-sample-role \
 --vpc-subnet-ids  subnet-c07efb9a subnet-2bc08b63 subnet-a9007bcf
 ```
 To enforce IAM authentication for users of the RDS Proxy, the `IAMAuth` value is set to **REQUIRED**
