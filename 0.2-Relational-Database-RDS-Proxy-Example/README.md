@@ -1,7 +1,4 @@
-# The Serverless LAMP stack 
-
-![The Serverless LAMP stack](../repository-resources/serverless-lamp-stack.png "The Serverless LAMP stack")
-
+# The Serverless LAMP stack: Using Relational Databases with Amazon RDS Proxy
 
 The following steps show how to connect to an Amazon Aurora MySQL database held inside a VPC.  The connection is made from a Lambda function running PHP. The Lambda function connects to the database via RDS Proxy. The database credentials that RDS Proxy uses are held in AWS Security Manager and accessed via IAM Authentication. 
 ![RDS Token Exchange](../repository-resources/rdsTokenexchange.png "the Token exchange")
