@@ -68,6 +68,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 
 ## Events
  - June 25/25 2020, Dutch PHP Conference Online [Serverless PHP applications with Bref](https://schedule.phpconference.nl/speaker/8) - *Matthieu Napoli*
+- July 1 2020, ServerlessDays Paris - Remote Session #3 [The new LAMP stack is serverless](https://www.meetup.com/fr-FR/Paris-Serverless-Architecture-Meetup/events/271290160/) - *Benjamin Smith*
 - September 24/25 2020, Serverless Days Zurich, [The new LAMP Stack for 2020,  ](https://zurich.serverlessdays.io/speakers/benjamin-smith.html) - *Benjamin Smith*
 
 ## Contribute
