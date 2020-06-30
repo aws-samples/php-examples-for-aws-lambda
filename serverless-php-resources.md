@@ -50,6 +50,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["PHP Layer for AWS Lambda"](https://www.youtube.com/watch?v=vb-o1DvvHxk) - *Gaultier Boniface*
 - ["Serverless PHP applications with Bref - Matthiew Napoli - PHP UK 2020"](https://www.youtube.com/watch?v=R2V4QTM2aes&feature=emb_title) - *Matthieu Napoli*
 - ["Serverless PHP? EC2 vs Elasticbeanstalk vs Lambda"](https://www.youtube.com/watch?v=eRY0Iay7Los&t=183s) - *Kai Hendry*
+- ["Serverless PHP using Bref with Matthieu Napoli - Serverless Chats podcast"](https://www.serverlesschats.com/55/) - *Matthieu Napoli*
 - ["Symfony aws"](https://www.slideshare.net/AlessandroMinoccheri/symfony-aws)- *Alessandro Minoccheri*
 
 
