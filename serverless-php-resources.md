@@ -21,6 +21,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Deploy Static Frontend + PHP Files Using ZEIT Now"](https://dev.to/nx1/deploy-static-frontend-php-files-using-zeit-now-mg) - *Milan Felix Šulc*
 - ["Going serverless with PHP"](https://medium.com/php-fad/going-serverless-with-php-f5a67cb3d67b) - *Koldo Picaza Rodríguez*
 - ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) - *Benjamin Smith*
+- ["The serverless LAMP stack – part 2 relational databases and RDS Proxy](https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/) - *Benjamin Smith*
 - ["PHPUnit with Bref"](https://blog.deleu.dev/phpunit-with-bref/) - *Marco Aurélio Deleu*
 - ["Responding to SMS in PHP using AWS Lambda and Bref"](https://www.twilio.com/blog/responding-to-sms-in-php-using-aws-lambda-and-bref-php) - *Gary Hockin*
 - ["Run a serverless Laravel app with queue workers on AWS Lambda using Bref"](https://blog.marco-marassi.com/posts/run-serverless-laravel-app-with-queue-workers-on-aws-lambda-using-bref) - *Marco Marassi*
@@ -52,6 +53,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Serverless PHP? EC2 vs Elasticbeanstalk vs Lambda"](https://www.youtube.com/watch?v=eRY0Iay7Los&t=183s) - *Kai Hendry*
 - ["Serverless PHP using Bref with Matthieu Napoli - Serverless Chats podcast"](https://www.serverlesschats.com/55/) - *Matthieu Napoli*
 - ["Symfony aws"](https://www.slideshare.net/AlessandroMinoccheri/symfony-aws)- *Alessandro Minoccheri*
+- ["The new LAMP stack is serverless - ServerlessDays Paris vritual session #3"](https://www.youtube.com/watch?v=cXI753VsIzs) - *Benjamin Smith*
 
 
 
@@ -71,7 +73,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 ## Events
  - June 25/25 2020, Dutch PHP Conference Online [Serverless PHP applications with Bref](https://schedule.phpconference.nl/speaker/8) - *Matthieu Napoli*
 - July 1 2020, ServerlessDays Paris - Remote Session #3 [The new LAMP stack is serverless](https://www.meetup.com/fr-FR/Paris-Serverless-Architecture-Meetup/events/271290160/) - *Benjamin Smith*
-- September 24/25 2020, Serverless Days Zurich, [The new LAMP Stack for 2020,  ](https://zurich.serverlessdays.io/speakers/benjamin-smith.html) - *Benjamin Smith*
+- September 24/25 2020, Serverless Days Zurich, [The new LAMP Stack for 2020](https://zurich.serverlessdays.io/speakers/benjamin-smith.html) - *Benjamin Smith*
 
 ## Contribute
 
