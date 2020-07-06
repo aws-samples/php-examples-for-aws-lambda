@@ -31,6 +31,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Une introduction au cloud et aux lambdas en PHP"](https://jolicode.com/blog/une-introduction-au-cloud-et-aux-lambdas-en-php) - *Loïck Piera*
 - ["Using AWS Lambda as a private Laravel API"](https://blog.deleu.dev/using-aws-lambda-as-a-private-laravel-api/) - *Marco Aurélio Deleu*
 - ["What is AWS Lambda, and how Laravel Vapor uses it"](https://dev.to/themsaid/what-is-aws-lambda-and-how-laravel-vapor-uses-it-1j98) - *Mohamed Said*
+- ["Protect your RDS MySQL DB from AWS Lambda Scalability with RDS Proxy"](https://dev.to/nideveloper/protect-your-rds-mysql-db-from-aws-lambda-scalability-5d80) - *Matt Coulter*
 
 
 
