@@ -23,6 +23,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) - *Benjamin Smith*
 - ["The serverless LAMP stack – part 2 relational databases and RDS Proxy](https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/) - *Benjamin Smith*
 - ["PHPUnit with Bref"](https://blog.deleu.dev/phpunit-with-bref/) - *Marco Aurélio Deleu*
+- ["Protect your RDS MySQL DB from AWS Lambda Scalability with RDS Proxy"](https://dev.to/nideveloper/protect-your-rds-mysql-db-from-aws-lambda-scalability-5d80) - *Matt Coulter*
 - ["Responding to SMS in PHP using AWS Lambda and Bref"](https://www.twilio.com/blog/responding-to-sms-in-php-using-aws-lambda-and-bref-php) - *Gary Hockin*
 - ["Run a serverless Laravel app with queue workers on AWS Lambda using Bref"](https://blog.marco-marassi.com/posts/run-serverless-laravel-app-with-queue-workers-on-aws-lambda-using-bref) - *Marco Marassi*
 - ["Serverless for PHP Developers"](https://blog.servmask.com/serverless-for-php-developers/) - *Gene Surov*
