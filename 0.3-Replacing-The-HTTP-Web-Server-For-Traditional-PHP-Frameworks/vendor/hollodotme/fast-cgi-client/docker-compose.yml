@@ -1,0 +1,71 @@
+version: '3'
+
+services:
+  php71:
+    build:
+      dockerfile: 7.1/Dockerfile
+      context: .docker/php
+    container_name: fcc_php71
+    restart: "no"
+    networks:
+      - fcc_network
+    volumes:
+      - ./:/repo
+
+  php72:
+    build:
+      dockerfile: 7.2/Dockerfile
+      context: .docker/php
+    container_name: fcc_php72
+    restart: "no"
+    networks:
+      - fcc_network
+    volumes:
+      - ./:/repo
+
+  php73:
+    build:
+      dockerfile: 7.3/Dockerfile
+      context: .docker/php
+    container_name: fcc_php73
+    restart: "no"
+    networks:
+      - fcc_network
+    volumes:
+      - ./:/repo
+
+  php74:
+    build:
+      dockerfile: 7.4/Dockerfile
+      context: .docker/php
+    container_name: fcc_php74
+    restart: "no"
+    networks:
+      - fcc_network
+    volumes:
+      - ./:/repo
+
+  composer:
+    image: composer:latest
+    container_name: fcc_composer
+    working_dir: /repo
+    restart: "no"
+    command: "update -o -v"
+    networks:
+      - fcc_network
+    volumes:
+      - ./:/repo
+
+  phpstan:
+    image: phpstan/phpstan:latest
+    container_name: fcc_phpstan
+    working_dir: /repo
+    restart: "no"
+    command: "analyze --level max src/"
+    networks:
+      - fcc_network
+    volumes:
+      - ./:/repo
+
+networks:
+  fcc_network:

@@ -1,0 +1,33 @@
+{
+    "name": "async-aws/lambda",
+    "type": "library",
+    "description": "Lambda client, part of the AWS SDK provided by AsyncAws.",
+    "keywords": [
+        "aws",
+        "amazon",
+        "sdk",
+        "async-aws",
+        "lambda"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2.5 || ^8.0",
+        "ext-json": "*",
+        "async-aws/core": "^1.2"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AsyncAws\\Lambda\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AsyncAws\\Lambda\\Tests\\": "tests/"
+        }
+    }
+}

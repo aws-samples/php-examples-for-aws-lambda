@@ -1,0 +1,7 @@
+User-Agent: curl/7.21.2 (x86_64-apple-darwin)
+Host: localhost:8080
+Accept: */*
+Expect: 100-continue
+Content-Type: text/plain
+
+bar

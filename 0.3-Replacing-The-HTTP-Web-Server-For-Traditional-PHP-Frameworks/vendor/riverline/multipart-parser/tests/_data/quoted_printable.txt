@@ -1,0 +1,26 @@
+Received: from xxxx (xxxx) by xxxx id h71i6i23n986 for <xxxxx>; Tue, 3 Nov 2015 08:38:17 +0100 (envelope-from <xxxx>)
+Received: from 127.0.0.1 (localhost [127.0.0.1])
+        by xxxx (Postfix) with ESMTP id 498E3DC2272
+        for <xxxx>; Tue,  3 Nov 2015 08:38:15 +0100 (CET)
+From: xxxx
+To: xxxx
+Subject: =?utf-8?Q?=D0=94=D0=BE=D0=B1=D1=80=D0=BE_=D0=BF=D0=BE?=
+         =?utf-8?Q?=D0=B6=D0=B0=D0=BB=D0=BE=D0=B2=D0=B0=D1=82=D1=8C_=D0=BD=D0=B0?=
+         Site.ru
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+        boundary="----=_Part_3326_22159698.1446536294305"
+
+------=_Part_3326_22159698.1446536294305
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+VGhpcyBpcyB0aGUgY29udGVudA==
+------=_Part_3326_22159698.1446536294305
+Content-Type: text/html;
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+This is the c=C3=B4nt=C3=A9nt
+------=_Part_3326_22159698.1446536294305--
