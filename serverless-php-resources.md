@@ -23,6 +23,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Going serverless with PHP"](https://medium.com/php-fad/going-serverless-with-php-f5a67cb3d67b) - *Koldo Picaza Rodríguez*
 - ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) - *Benjamin Smith*
 - ["The serverless LAMP stack – part 2 relational databases and RDS Proxy](https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/) - *Benjamin Smith*
+- ["The serverless LAMP stack – part 3 replacing the web server](https://aws.amazon.com/blogs/compute/the-serverless-lamp-stack-part-3-replacing-the-web-server/) - *Benjamin Smith & Matthieu Napoli*
 - ["PHPUnit with Bref"](https://blog.deleu.dev/phpunit-with-bref/) - *Marco Aurélio Deleu*
 - ["Protect your RDS MySQL DB from AWS Lambda Scalability with RDS Proxy"](https://dev.to/nideveloper/protect-your-rds-mysql-db-from-aws-lambda-scalability-5d80) - *Matt Coulter*
 - ["Responding to SMS in PHP using AWS Lambda and Bref"](https://www.twilio.com/blog/responding-to-sms-in-php-using-aws-lambda-and-bref-php) - *Gary Hockin*
@@ -33,7 +34,6 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Une introduction au cloud et aux lambdas en PHP"](https://jolicode.com/blog/une-introduction-au-cloud-et-aux-lambdas-en-php) - *Loïck Piera*
 - ["Using AWS Lambda as a private Laravel API"](https://blog.deleu.dev/using-aws-lambda-as-a-private-laravel-api/) - *Marco Aurélio Deleu*
 - ["What is AWS Lambda, and how Laravel Vapor uses it"](https://dev.to/themsaid/what-is-aws-lambda-and-how-laravel-vapor-uses-it-1j98) - *Mohamed Said*
-
 
 
 ## Case studies
@@ -58,8 +58,6 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["The new LAMP stack is serverless - ServerlessDays Paris vritual session #3"](https://www.youtube.com/watch?v=cXI753VsIzs) - *Benjamin Smith*
 
 
-
-
 ## Tools
 - ["All you need to log with Bref on AWS Lambda"](https://github.com/brefphp/logger) - *brefphp community*
 - ["Bref PHP extensions separately available as Lambda layers"](https://github.com/brefphp/extra-php-extensions) - *brefphp community*
@@ -77,6 +75,8 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - July 1 2020, ServerlessDays Paris - Remote Session #3 [The new LAMP stack is serverless](https://www.meetup.com/fr-FR/Paris-Serverless-Architecture-Meetup/events/271290160/) - *Benjamin Smith*
 - July 21 2020, PHP North East, UK - online [Introducing the serverless LAMP stack](https://www.meetup.com/phpnortheast/events/271775018/) - *Benjamin Smith*
 - September 24/25 2020, Serverless Days Zurich, [The new LAMP Stack for 2020](https://zurich.serverlessdays.io/speakers/benjamin-smith.html) - *Benjamin Smith*
+- October 23 2020, PHPForum, Paris, [The new LAMP stack is serverless](https://event.afup.org/) - *Benjamin Smith*
+
 
 ## Contribute
 
