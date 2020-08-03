@@ -1,127 +1,67 @@
-# The Serverless LAMP stack: Building a serverless Laravel app
+# The Serverless LAMP stack: Replacing the http server
 
-## Deploying Laravel and Bref with AWS SAM
+A serverless PHP application without an http web server.
 
-1. Download the Laravel installer using [Composer](https://getcomposer.org/) :
+The following steps show how deploy this architecture using the [AWS Serverless Application Model (SAM) CLI](https://aws.amazon.com/serverless/sam/).
 
-```
-composer global require Laravel/installer
-```
+![Serverless architecture](../repository-resources/cloudFrontRouting.png "Serverless architecture")
 
-1. Install [Laravel](https://laravel.com/):
+This template configures Amazon CloudFront to securely serve and cache static assets from a private Amazon S3 bucket. Dynamic requests are routed downstream to Amazon API Gateway and onto a single AWS Lambda function that holds the applicaion's business logic.
 
-```~~~~
-composer create-project --prefer-dist laravel/laravel blog
-```
+## In this repo
 
-1. In the Laravel project, install [Bref](https://bref.sh/) using Composer:
-
-```
-composer require bref/laravel-bridge
-```
-
-1. Clone the [AWS SAM template](https://github.com/aws-samples/php-examples-for-aws-lambda/blob/master/0.4-Building-A-Serverless-Laravel-App-With-AWS-SAM/template.yaml) in your application’s root directory
+```~~~
+0.3-Replacing-The-HTTP-Web-Server-For-Traditional-PHP-Frameworks 
+ ┣ assets //dir containing static example files
+ ┃ ┣ serverless-lamp-stack.png // example static image 
+ ┃ ┗ stylesheet.css //example static stylesheet
+ ┣ README.md // this readme~~~~
+ ┣ index.php //Lambda function
+ ┗ template.yaml //SAM template
 
 ```
-git clone https://github.com/aws-samples/php-examples-for-aws-lambda
+
+## Deploying the stack
+
+Clone this repository:
+
+```bash
+git clone
 ```
 
-1. Deploy the application using the [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) guided deploy:
+Install [Bref](https://github.com/brefphp/bref) using Composer:
 
+```bash
+composer require bref/bref
 ```
+
+Deploy the stack: This command uses SAM CLI, but you could also deploy with the [serverless framework](https://www.serverless.com/):
+
+```bash
 sam deploy -g
 ```
 
-Once AWS SAM deploys the application, it returns the [Amazon CloudFront](https://aws.amazon.com/cloudfront/) distribution’s domain name. This distribution serves the serverless Laravel application.
+## Output
 
-![Serverless architecture](../repository-resources/CloudFrontDomainName.png "Serverless architecture")
+This stack will deploy:
 
-## Configuring Laravel for Lambda
+* A CloudFront dristribution with 2 origin domains:
+  * **Assets**, This routes any requests to https://domain/assets to an S3 bucket
+  * **Website**, This routes all other requests to API gateway
+* A private Amazon S3 Bucket
+* An AWS API Gateway HTTP API with routes
+* A Lambda function with the Bref FPM layer
+* An S3 Origin Identity for your CloudFront Distro to access the private S3 bucket.
 
-**Session data store**
-Update the Laravel `.env` file to set the *session_driver* to *cookie.*
-`SESSION_DRIVER=cookie`
+## Testing
 
-**Logging**
-Use the *stderr* channel to write all errors, warnings and notices emitted by PHP onto [Amazon CloudWatch Logs](https://aws.amazon.com/cloudwatch/features/)
+To test that requests for static assets are routed via S3, and dynamic assets are routed via API Gateway -> Lambda:
 
-Update the Laravel `.env` file
-`LOG_CHANNEL=stderr`
-
-**Compiled views**
-In the `.env` file, add the following line to configure Laravel to use a new directory path for compiled views:
-
-`VIEW_COMPILED_PATH=/tmp/storage/framework/views`
-
-Add the following code to the *`Providers/AppServiceProvider.php`* file.
-
-```
-public function boot()
-{
-   // Make sure the directory for compiled views exist
-   if (! is_dir(config('view.compiled'))) {
-   mkdir(config('view.compiled'), 0755, true);
-   }
-}
-```
-
-## File system abstraction with Amazon S3
-
-Configure Laravel to use the [Amazon S3](https://aws.amazon.com/s3/) filesystem driver by adding the following line to the `.env` file:
-
-`FILESYSTEM_DRIVER=s3`
-
-**Public asset files**
-
-Change the configuration in `config/filesystems.php` to the following:
-
-```
-+ 'public' => env('FILESYSTEM_DRIVER_PUBLIC', 'public_local'),
-  
-    'disks' => [
-
-        'local' => [
-            'driver' => 'local',
-            'root' => storage_path('app'),
-        ],
-
--       'public => [
-+	 'public_local' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-
-        's3' => [
-            'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'token' => env('AWS_SESSION_TOKEN'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
-        ],
-
-+ 	's3_public' => [
-+           'driver' => 's3',
-+           'key' => env('AWS_ACCESS_KEY_ID'),
-+           'secret' => env('AWS_SECRET_ACCESS_KEY'),
-+           'token' => env('AWS_SESSION_TOKEN'),
-+           'region' => env('AWS_DEFAULT_REGION'),
-+           'bucket' => env('AWS_PUBLIC_BUCKET'),
-+           'url' => env('AWS_URL'),
-+        ],
-
-    ],
-```
-
-Add the following line to the `.env` file to configure the public disk to use S3:
-
-`FILESYSTEM_DRIVER_PUBLIC=s3`
-
-
+1. Create a new folder in the S3 bucket named 'assets'
+2. Upload the `serverless-lamp-stack.png` and `stylesheet.css` files to the assets folder.
+3. In the browser, navigate to the domain generated by [CloudFront](https://aws.amazon.com/cloudfront/)
+4. append `?name=value` to the url
+   ![Example screenshot](../repository-resources/webpagess.png "Example screenshot]")
 
 ## Issue Reporting
 
@@ -130,4 +70,3 @@ If you have found a bug or if you have a feature request, please report them at 
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more info.
-
