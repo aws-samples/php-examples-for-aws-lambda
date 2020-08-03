@@ -47,6 +47,7 @@ ASSET_URL=https://{YOUR-CLOUDFRONT-DOMAIN}.cloudfront.net
 ```
 
 **Compiled views**
+
 Add the following code to the *`Providers/AppServiceProvider.php`* file.
 
 ```php
