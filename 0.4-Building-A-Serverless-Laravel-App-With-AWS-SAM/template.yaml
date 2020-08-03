@@ -1,0 +1,143 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  0.4 - Building a serverless Laravel App with AWS SAM and Bref-FPM
+  
+##########################################################################
+#  Globals                                                               #
+##########################################################################
+Globals:
+  Function:
+    Timeout: 3
+    Environment:
+      Variables:
+        AWS_BUCKET: !Ref Storage
+        AWS_PUBLIC_BUCKET: !Ref Assets
+Resources:
+##########################################################################
+#  S3 Bucket to store static assets                                      #
+##########################################################################  
+  Assets:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: php-example-laravel-public-bucket
+
+  Storage:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: php-example-laravel-filesystem-bucket
+
+   # The policy that makes the bucket publicly readable
+  AssetsBucketPolicy: 
+    Type: AWS::S3::BucketPolicy
+    Properties: 
+      Bucket:
+        Ref: Assets # References the bucket we defined above
+      PolicyDocument: 
+        Statement:
+          Effect: Allow  
+          Action: s3:GetObject # to read
+          Principal: 
+            CanonicalUser: 
+              Fn::GetAtt: S3OriginIdentityExample.S3CanonicalUserId
+          Resource: # things in the bucket 'arn:aws:s3:::<bucket-name>/*'
+            Fn::Join: 
+                - ""
+                - 
+                  - "arn:aws:s3:::"
+                  - 
+                    Ref: Assets
+                  - "/*"            
+##########################################################################
+#  Lambda function with PHP runtime provided by layers                   #
+##########################################################################
+  CatchAllLambdaFunctionLaravel:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: Lambda function to hosts entire application codebase
+      CodeUri: .
+      Runtime: provided
+      Handler: public/index.php #follows our Laravel implementation
+      MemorySize: 1024
+      Timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+      Tracing: Active
+      Policies:
+        - S3FullAccessPolicy:
+            BucketName: !Ref Storage
+        - S3FullAccessPolicy:
+            BucketName: !Ref Assets
+      Environment:
+        Variables:
+          APP_STORAGE: /tmp
+
+      Layers:
+        - 'arn:aws:lambda:us-east-1:209497400698:layer:php-74-fpm:12'
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: ANY
+        DynamicRequestsProxy:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+##########################################################################
+#  CloudFront configuration                                              #
+##########################################################################  
+  Cloudfrontdistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties: 
+      DistributionConfig:
+        Enabled: true 
+        Origins:
+            -   Id: Website  
+                DomainName: !Join ['.', [!Ref ServerlessHttpApi, 'execute-api', !Ref AWS::Region, 'amazonaws.com']]
+                CustomOriginConfig:
+                  OriginProtocolPolicy: 'https-only' # API Gateway only supports HTTPS
+        # The assets (S3)
+            -   Id: Assets
+                DomainName: !GetAtt Assets.RegionalDomainName
+                S3OriginConfig: {} # this key is required to tell CloudFront that this is an S3 origin, even though nothing is configured
+        # The default behavior is to send everything to AWS Lambda
+        DefaultCacheBehavior:
+          AllowedMethods: [GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE]
+          TargetOriginId: Website # the PHP application
+          ForwardedValues:
+            QueryString: true
+            Cookies:
+                Forward: all # Forward cookies to use them in PHP
+            # We must *not* forward the `Host` header else it messes up API Gateway
+            Headers:
+                - 'Accept'
+                - 'Accept-Language'
+                - 'Origin'
+                - 'Referer'
+          ViewerProtocolPolicy: redirect-to-https
+        CacheBehaviors:
+          # Assets will be served under the `/assets/` prefix
+          -   PathPattern: 'assets/*'
+              TargetOriginId: Assets # the static files on S3
+              AllowedMethods: [GET, HEAD]
+              ViewerProtocolPolicy: redirect-to-https
+              ForwardedValues:
+                  # No need for all that with assets
+                  QueryString: 'false'
+                  Cookies:
+                      Forward: none
+              #ViewerProtocolPolicy: redirect-to-https
+              Compress: true
+  
+  S3OriginIdentityExample:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: Cloudfront AOI
+##########################################################################
+#  Stack Outputs                                                         #
+##########################################################################  
+Outputs:
+   Domain:
+     Description: 'CloudFront domain name'
+     Value: !GetAtt Cloudfrontdistribution.DomainName
