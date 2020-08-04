@@ -1,33 +1,32 @@
 # The Serverless LAMP stack: Building a serverless Laravel app
 
 This blog post explains these step and concepts in detail:
-
-~~~~[https://aws-blogs-prod.amazon.com/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/](https://aws-blogs-prod.amazon.com/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/)
+[https://aws-blogs-prod.amazon.com/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/](https://aws-blogs-prod.amazon.com/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/)
 
 ## Deploying Laravel and Bref with AWS SAM
 
 1. Download the Laravel installer using [Composer](https://getcomposer.org/) :
-
+   
    ```
    composer global require Laravel/installer
    ```
 2. Install [Laravel](https://laravel.com/):
-
+   
    ```
    composer create-project --prefer-dist laravel/laravel blog```
    ```
 3. In the Laravel project, install [Bref](https://bref.sh/) using Composer:
-
+   
    ```
    composer require bref/laravel-bridge
    ```
 4. Clone the [AWS SAM template](https://github.com/aws-samples/php-examples-for-aws-lambda/blob/master/0.4-Building-A-Serverless-Laravel-App-With-AWS-SAM/template.yaml) in your application’s root directory
-
+   
    ```
    git clone https://github.com/aws-samples/php-examples-for-aws-lambda
    ```
 5. Deploy the application using the [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) guided deploy:
-
+   
    ```
    sam deploy -g
    ```
@@ -110,3 +109,8 @@ If you have found a bug or if you have a feature request, please report them at 
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more info.
+
+~~~~
+
+~~~~
+
