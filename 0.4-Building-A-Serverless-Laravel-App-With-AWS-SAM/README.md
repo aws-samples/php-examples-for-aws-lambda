@@ -1,7 +1,7 @@
 # The Serverless LAMP stack: Building a serverless Laravel app
 
 This blog post explains these step and concepts in detail:
-[https://aws-blogs-prod.amazon.com/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/](https://aws-blogs-prod.amazon.com/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/)
+[https://aws.amazon.com/blogs/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/](https://aws.amazon.com/blogs/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/)
 
 ## Deploying Laravel and Bref with AWS SAM
 
