@@ -13,7 +13,7 @@ This blog post explains these step and concepts in detail:
 2. Install [Laravel](https://laravel.com/):
    
    ```
-   composer create-project --prefer-dist laravel/laravel blog```
+   composer create-project --prefer-dist laravel/laravel blog
    ```
 3. In the Laravel project, install [Bref](https://bref.sh/) using Composer:
    
