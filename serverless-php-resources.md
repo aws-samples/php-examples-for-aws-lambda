@@ -19,9 +19,11 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Bleeding Edge PHP on ZEIT Now"](https://dev.to/nx1/bleeding-edge-php-on-zeit-now-565g) -*Milan Felix Šulc*
 * ["Compiling wkhtmltopdf for use inside an AWS Lambda function with Bref is easier than you'd think"](https://tech.mybuilder.com/compiling-wkhtmltopdf-aws-lambda-with-bref-easier-than-you-think/) -*Neal Brooks*
 * ["Configure symfony for a serverless lambda environment in bref"](https://www.marco.zone/configure-symfony-for-serverless-lambda) -*Marco Pfeiffer*
+* ["Deploy s Symfony application in AWS Lambda"](https://medium.com/@smaine.milianni/aws-lambda-and-symfony-6d3e9831c3cd)-*Smaine Milianni*
 * ["Deploying Laravel Artisan on AWS Lambda"](https://blog.deleu.dev/deploying-laravel-artisan-on-aws-lambda/) -*Marco Aurélio Deleu*
 * ["Deploy Static Frontend + PHP Files Using ZEIT Now"](https://dev.to/nx1/deploy-static-frontend-php-files-using-zeit-now-mg) -*Milan Felix Šulc*
 * ["Going serverless with PHP"](https://medium.com/php-fad/going-serverless-with-php-f5a67cb3d67b) -*Koldo Picaza Rodríguez*
+* ["Introducing the CDK construct library for the Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-cdk-construct-library-for-the-serverless-lamp-stack/) -*Benjamin Smith*
 * ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) -*Benjamin Smith*
 * ["The AWS Serverless LAMP Stack: the Future of PHP or Vendor Lock-in?"](https://www.infoq.com/news/2020/07/aws-serverless-lamp/) -*Renato Losio*
 * ["The serverless LAMP stack – part 2 relational databases and RDS Proxy](https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/) -*Benjamin Smith*
@@ -33,6 +35,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Serverless for PHP Developers"](https://blog.servmask.com/serverless-for-php-developers/) -*Gene Surov*
 * ["Serverless PHP using AWS Lambda"](https://medium.com/startupward/serverless-php-using-aws-lambda-e36e214d43f7) -*Jacques Fu*
 * ["Serverless Symfony Demo/Reference implementation"](https://github.com/Nemo64/serverless-symfony) -*Marco Pfeiffer*
+* ["Setup Queue with Serverless Laravel using bref"](https://dev.to/chandreshhere/setup-queue-with-serverless-laravel-using-bref-1g71)-*Chandresh Singh*
 * ["Symfony Messenger on AWS Lambda"](https://developer.happyr.com/symfony-messenger-on-aws-lambda) -*Tobias Nyholm*
 * ["Une introduction au cloud et aux lambdas en PHP"](https://jolicode.com/blog/une-introduction-au-cloud-et-aux-lambdas-en-php) -*Loïck Piera*
 * ["Using AWS Lambda as a private Laravel API"](https://blog.deleu.dev/using-aws-lambda-as-a-private-laravel-api/) -*Marco Aurélio Deleu*
@@ -43,6 +46,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["From LAMP to serverless: case study of externals.io"](https://mnapoli.fr/serverless-case-study-externals/) -*Matthieu Napoli*
 - ["How Serverless Saved Us For $2"](https://devops-life.com/blog/2020/03/06/how-serverless-saved-us-for-$2-with-bref-sh/) -*Tristan Bessoussa*
 - ["Retour d’expérience : Serverless et PHP"](https://www.enoptea.fr/serverless-et-php/) -*Gaultier Boniface*
+- ["Setup Queue with Serverless Laravel using bref"](https://dev.to/chandreshhere/setup-queue-with-serverless-laravel-using-bref-1g71?utm_source=newsletter&utm_medium=email&utm_content=offbynone&utm_campaign=Off-by-none%3A%20Issue%20%23102)-*Chandresh Singh*
 - ["Serverless case study: PrettyCI and Laravel Queues"](https://mnapoli.fr/serverless-case-study-prettyci/) -*Matthieu Napoli*
 - ["Serverless case study: returntrue.win"](https://www.markdownguide.org/getting-started/) -*Matthieu Napoli*
 - ["Using NewRelic with Bref on AWS Lambda"](https://developer.happyr.com/newrelic-on-bref-aws-lambda) -*Tobias Nyholm*
@@ -67,6 +71,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Bref PHP extensions separately available as Lambda layers"](https://github.com/brefphp/extra-php-extensions) -*brefphp community*
 - ["Bref, the Laravel way"](https://github.com/stechstudio/laravel-bref-bridge) -*Signature Tech Studio*
 - ["Bridge to use Symfony Messenger on AWS Lambda with Bref"](https://github.com/brefphp/symfony-messenger) -*brefphp community*
+- ["CDK construct library for the serverless LAMP stack"](https://github.com/pahud/cdk-serverless-lamp#readme)-*Pahud Hsieh*
 - ["Driver for AWS Aurora serverless rds data api / doctrine database abstraction layer"](https://github.com/Nemo64/dbal-rds-data) -*Marco Pfeiffer*
 - ["Examples of PHP applications built with Bref"](https://github.com/brefphp/examples) -*brefphp community*
 - ["Package to use Laravel on AWS Lambda with Bref"](https://github.com/brefphp/laravel-bridge) -*brefphp community*
@@ -77,7 +82,8 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 
 - June 25/25 2020, Dutch PHP Conference Online[Serverless PHP applications with Bref](https://schedule.phpconference.nl/speaker/8) -*Matthieu Napoli*
 - July 1 2020, ServerlessDays Paris - Remote Session #3[The new LAMP stack is serverless](https://www.meetup.com/fr-FR/Paris-Serverless-Architecture-Meetup/events/271290160/) -*Benjamin Smith*
-- July 21 2020, PHP North East, UK - online[Introducing the serverless LAMP stack](https://www.meetup.com/phpnortheast/events/271775018/) -*Benjamin Smith*
+- July 21 2020, PHP North East, UK - online, [Introducing the serverless LAMP stack](https://www.meetup.com/phpnortheast/events/271775018/) -*Benjamin Smith*
+- September 2nd 2020, PHP Sussex - online, [Introducing the serverless LAMP stack](https://www.meetup.com/phpnortheast/events/271775018/) -*Benjamin Smith*
 - September 24/25 2020, Serverless Days Zurich,[The new LAMP Stack for 2020](https://zurich.serverlessdays.io/speakers/benjamin-smith.html) -*Benjamin Smith*
 - October 23 2020, PHPForum, Paris,[The new LAMP stack is serverless](https://event.afup.org/) -*Benjamin Smith*
 
