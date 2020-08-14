@@ -12,7 +12,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 
 > PHP, Serverless, LAMP, Amazon API Gateway, AWS Lambda, MySql, Amazon Aurora, Amazon RDS Proxy, Lambda Layers, Lambda Custom Runtime API
 
-## Articles
+## Articles/References
 
 * ["Authenticating AWS Cognito with Laravel"](https://blog.deleu.dev/authenticating-aws-cognito-with-laravel/) -*Marco Aurélio Deleu*
 * ["AWS Lambda With PHP Using Bref And Serverless Framework"](https://www.nexmo.com/blog/2020/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr) -*Adam Culp*
@@ -32,6 +32,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Run a serverless Laravel app with queue workers on AWS Lambda using Bref"](https://blog.marco-marassi.com/posts/run-serverless-laravel-app-with-queue-workers-on-aws-lambda-using-bref) -*Marco Marassi*
 * ["Serverless for PHP Developers"](https://blog.servmask.com/serverless-for-php-developers/) -*Gene Surov*
 * ["Serverless PHP using AWS Lambda"](https://medium.com/startupward/serverless-php-using-aws-lambda-e36e214d43f7) -*Jacques Fu*
+* ["Serverless Symfony Demo/Reference implementation"](https://github.com/Nemo64/serverless-symfony) -*Marco Pfeiffer*
 * ["Symfony Messenger on AWS Lambda"](https://developer.happyr.com/symfony-messenger-on-aws-lambda) -*Tobias Nyholm*
 * ["Une introduction au cloud et aux lambdas en PHP"](https://jolicode.com/blog/une-introduction-au-cloud-et-aux-lambdas-en-php) -*Loïck Piera*
 * ["Using AWS Lambda as a private Laravel API"](https://blog.deleu.dev/using-aws-lambda-as-a-private-laravel-api/) -*Marco Aurélio Deleu*
