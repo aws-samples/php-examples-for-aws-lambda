@@ -40,7 +40,7 @@ cd openssl-1.0.1k
 cd ~
 
 # Download the PHP 7.3.0 source
-mkdir -p ~/environment/php-7-bin
+mkdir -p ~/environment/php-7-bin && cd ~/environment/php-7-bin
 curl -sL https://github.com/php/php-src/archive/php-7.3.0.tar.gz | tar -xvz
 cd php-src-php-7.3.0
 
