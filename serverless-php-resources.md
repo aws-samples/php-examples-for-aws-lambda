@@ -71,7 +71,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 - ["Bref PHP extensions separately available as Lambda layers"](https://github.com/brefphp/extra-php-extensions) -*brefphp community*
 - ["Bref, the Laravel way"](https://github.com/stechstudio/laravel-bref-bridge) -*Signature Tech Studio*
 - ["Bridge to use Symfony Messenger on AWS Lambda with Bref"](https://github.com/brefphp/symfony-messenger) -*brefphp community*
-- ["CDK construct library for the serverless LAMP stack"](https://github.com/pahud/cdk-serverless-lamp#readme)-*Pahud Hsieh*
+- ["CDK construct library for the serverless LAMP stack"](https://github.com/aws-samples/cdk-serverless-lamp#readme)-*Pahud Hsieh*
 - ["Driver for AWS Aurora serverless rds data api / doctrine database abstraction layer"](https://github.com/Nemo64/dbal-rds-data) -*Marco Pfeiffer*
 - ["Examples of PHP applications built with Bref"](https://github.com/brefphp/examples) -*brefphp community*
 - ["Package to use Laravel on AWS Lambda with Bref"](https://github.com/brefphp/laravel-bridge) -*brefphp community*
