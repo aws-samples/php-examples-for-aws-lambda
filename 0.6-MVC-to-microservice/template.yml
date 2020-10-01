@@ -1,0 +1,185 @@
+# This is the SAM template that represents the architecture of your serverless application
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-basics.html
+
+# The AWSTemplateFormatVersion identifies the capabilities of the template
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/format-version-structure.html
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  mvc-php
+
+# Transform section specifies one or more macros that AWS CloudFormation uses to process your template
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html
+Transform:
+- AWS::Serverless-2016-10-31
+
+# Resources declares the AWS resources that you want to include in the stack
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html
+Resources:
+  # Each Lambda function is defined by properties:
+  # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+  # This is a Lambda function config associated with the source code: get-all-items
+  getAllItemsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/handlers/get-all-items
+      Runtime: provided
+      Handler: index
+      MemorySize: 1024
+      Timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+      Description: A simple example includes a HTTP get method to get all items from a DynamoDB table.
+      Policies:
+        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SampleTable
+      Layers:
+        - arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-runtime:8
+        - arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-vendor:2      
+      Environment:
+        Variables:
+          # Make table name accessible as environment variable from function code during execution
+          SAMPLE_TABLE: !Ref SampleTable
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: GET  
+  # Each Lambda function is defined by properties:
+  # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+  # This is a Lambda function config associated with the source code: get-by-id
+  getByIdFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/handlers/get-by-id
+      Handler: index
+      Runtime: provided
+      MemorySize: 1024
+      Timeout: 28
+      Description: A simple example includes a HTTP get method to get one item by id from a DynamoDB table.
+      Policies:
+        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SampleTable
+      Layers:
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-runtime:8
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-vendor:2     
+      Environment:
+        Variables:
+          # Make table name accessible as environment variable from function code during execution
+          SAMPLE_TABLE: !Ref SampleTable
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /{id}
+            Method: GET 
+  # Each Lambda function is defined by properties:
+  # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+  # This is a Lambda function config associated with the source code: put-item
+  putItemFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/handlers/put-item
+      Handler: index
+      Runtime: provided
+      MemorySize: 1024
+      Timeout: 28
+      Description: A simple example includes a HTTP post method to add one item to a DynamoDB table.
+      Policies:
+        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SampleTable
+      Layers:
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-runtime:8
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-vendor:2    
+      Environment:
+        Variables:
+          # Make table name accessible as environment variable from function code during execution
+          SAMPLE_TABLE: !Ref SampleTable
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: POST 
+  # Simple syntax to create a DynamoDB table with a single attribute primary key, more in
+  # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
+
+  # This is a Lambda function config associated with the source code: update-item
+  updateItemFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/handlers/update-item
+      Handler: index
+      Runtime: provided
+      MemorySize: 1024
+      Timeout: 28
+      Description: A simple example includes a HTTP post method to update one item from a DynamoDB table.
+      Policies:
+        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SampleTable
+      Layers:
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-runtime:8
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-vendor:2    
+      Environment:
+        Variables:
+          # Make table name accessible as environment variable from function code during execution
+          SAMPLE_TABLE: !Ref SampleTable
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /{id}
+            Method: PATCH 
+  # Simple syntax to create a DynamoDB table with a single attribute primary key, more in
+  # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
+
+  # This is a Lambda function config associated with the source code: update-item
+  deleteItemFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/handlers/delete-item
+      Handler: index
+      Runtime: provided
+      MemorySize: 1024
+      Timeout: 28
+      Description: A simple example includes a HTTP post method to delete one item from a DynamoDB table.
+      Policies:
+        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SampleTable
+      Layers:
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-runtime:8
+        -  arn:aws:lambda:eu-west-1:981723798357:layer:PHP-example-vendor:2    
+      Environment:
+        Variables:
+          # Make table name accessible as environment variable from function code during execution
+          SAMPLE_TABLE: !Ref SampleTable
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /{id}
+            Method: DELETE 
+  # Simple syntax to create a DynamoDB table with a single attribute primary key, more in
+  # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
+
+  # DynamoDB table to store item: {id: &lt;ID&gt;, name: &lt;NAME&gt;}
+  SampleTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: id
+        Type: String
+      ProvisionedThroughput:
+        ReadCapacityUnits: 2
+        WriteCapacityUnits: 2
+
+Outputs:
+  WebEndpoint:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
