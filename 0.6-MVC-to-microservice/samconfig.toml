@@ -1,9 +1,0 @@
-version = 0.1
-[default]
-[default.deploy]
-[default.deploy.parameters]
-stack_name = "php-microservice"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-ys631jvucmpb"
-s3_prefix = "php-microservice"
-region = "eu-west-1"
-capabilities = "CAPABILITY_IAM"
