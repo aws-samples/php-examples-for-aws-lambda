@@ -8,6 +8,8 @@
 - [0.2-Relational-Database-RDS-Proxy-Example](https://github.com/aws-samples/php-examples-for-aws-lambda/tree/master/0.2-Relational-Database-RDS-Proxy-Example) A PHP Lambda function that connects to an Aurora MySQL database using Amazon RDS Proxy.
 - [0.3-Replacing-The-HTTP-Web-Server](https://github.com/aws-samples/php-examples-for-aws-lambda/tree/master/0.3-Replacing-The-HTTP-Web-Server-For-Traditional-PHP-Frameworks) Routing all HTTP requests for static assets directly to S3 and all dynamic requests to a single Lambda function via API Gateway, using Bref's FPM custom runtime.
 - [0.4-Building-A-Serverless-Laravel-App](https://github.com/aws-samples/php-examples-for-aws-lambda/tree/master/0.4-Building-A-Serverless-Laravel-App-With-AWS-SAM) Deploy a serverless Laravel application with AWS SAM.
+- [0.5-The CDK construct library for the serverless LAMP stack](https://aws.amazon.com/blogs/compute/introducing-the-cdk-construct-library-for-the-serverless-lamp-stack/) Deploy a serverless Laravel application with the AWS CDK.
+- [0.6-From-MVC-To-Microservices](https://github.com/aws-samples/php-examples-for-aws-lambda/tree/master/0.6-MVC-to-microservice) build serverless PHP applications using microservices..
 
 ## Community Curated PHP / Serverless resources
 
