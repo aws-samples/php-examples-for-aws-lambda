@@ -122,18 +122,9 @@ aws lambda publish-layer-version \
 
 2. Make note of each command’s LayerVersionArn output value (for example `arn:aws:lambda:eu-west-1:XXXXXXXXXXXX:layer:PHP-example-runtime:1`). You will use this to add the Layers to your PHP Lambda functions.
 
-## Resources
+## Resources - Blog posts,code samples, talks & documentation
 
-### AWS Blog posts & documentation
-
-* https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/
-* https://aws.amazon.com/blogs/apn/aws-lambda-custom-runtime-for-php-a-practical-example/
-* https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html
-
-### Open source Lambda layers
-
-* https://bref.sh/
-* https://github.com/stackery/php-lambda-layer
+* https://github.com/aws-samples/php-examples-for-aws-lambda/blob/master/serverless-php-resources.md
 
 ## Issue Reporting
 
