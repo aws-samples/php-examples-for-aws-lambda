@@ -39,9 +39,9 @@ make install
 
 ### Packaging PHP with the Bootstrap file
 
-⚠️ <font size="2">[This custom runtime bootstrap file](/bootstrap) is for demonstration purposes only. It does not contain any error handling or abstractions.</font>
+⚠️ <font size="2">[This custom runtime bootstrap file](/0.1-SimplePhpFunction/bootstrap) is for demonstration purposes only. It does not contain any error handling or abstractions.</font>
 
-1. Download this [example bootstrap file](/bootstrap) and save it together with the complied php binary into the following directory structure:
+1. Download this [example bootstrap file](/0.1-SimplePhpFunction/bootstrap) and save it together with the complied php binary into the following directory structure:
 
 <pre>
 +--runtime
@@ -52,7 +52,7 @@ make install
 
 ```
 cd /home/ec2-user/environment/php-7-bin
-wget https://raw.githubusercontent.com/aws-samples/php-examples-for-aws-lambda/master/bootstrap
+wget https://raw.githubusercontent.com/aws-samples/php-examples-for-aws-lambda/master/0.1-SimplePhpFunction/bootstrap
 # make executable
 chmod +x bootstrap
 ```
@@ -67,7 +67,7 @@ zip -r runtime.zip bin bootstrap
 
 ### Creating dependencies
 
-[This bootstrap file](/bootstrap) uses [Guzzle](https://github.com/guzzle/guzzle), a popular PHP HTTP client, to make requests to the custom runtime API.  The Guzzle package is installed using [Composer package manager](https://getcomposer.org/).
+[This bootstrap file](/0.1-SimplePhpFunction/bootstrap) uses [Guzzle](https://github.com/guzzle/guzzle), a popular PHP HTTP client, to make requests to the custom runtime API.  The Guzzle package is installed using [Composer package manager](https://getcomposer.org/).
 
 In an Amazon Linux environment compatible with the [Lambda execution environment](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html)
 
