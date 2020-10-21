@@ -28,6 +28,11 @@ Clone this repository:
 ```bash
 git clone
 ```
+change to the correct directory:
+
+```bash
+cd 0.3-Replacing-The-HTTP-Web-Server-For-Traditional-PHP-Frameworks
+```
 
 Install [Bref](https://github.com/brefphp/bref) using Composer:
 
