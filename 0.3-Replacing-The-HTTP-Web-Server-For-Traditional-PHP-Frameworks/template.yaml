@@ -1,14 +1,10 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Replaceing webhosts for traditional PHP frameworks
+Description:  0.3 - Using Amazon CloudFront to cache and route static requests directly to S3.
 Transform: AWS::Serverless-2016-10-31
 
-Description: >
-  0.3 - Using Amazon CloudFront to cache and route static requests directly to S3.
-  
 ##########################################################################
 #  Parameters & Globals                                                  #
 ##########################################################################
-Parameters:
 Globals:
   Function:
     Timeout: 3
@@ -20,7 +16,7 @@ Resources:
   Assets:
     Type: AWS::S3::Bucket
     Properties:
-        BucketName: php-example-assets-for-php-app-example-2
+        BucketName: php-example-assets-for-php-app-example-3
    # The policy that makes the bucket publicly readable
   AssetsBucketPolicy: 
     Type: AWS::S3::BucketPolicy
@@ -55,9 +51,6 @@ Resources:
       MemorySize: 1024
       Timeout: 30
       Tracing: Active
-      Environment:
-        Variables:
-          example: !Ref Example
       Layers:
         - 'arn:aws:lambda:us-east-1:209497400698:layer:php-73-fpm:25'
       Events:
@@ -113,7 +106,7 @@ Resources:
               ViewerProtocolPolicy: redirect-to-https
               ForwardedValues:
                   # No need for all that with assets
-                  QueryString: 'false'
+                  QueryString: false
                   Cookies:
                       Forward: none
               #ViewerProtocolPolicy: redirect-to-https
@@ -127,13 +120,13 @@ Resources:
 ##########################################################################
 #  Stack Outputs                                                         #
 ##########################################################################  
-  Outputs:
-    BucketName:
-      Description: 'S3 Bucket Name'
-      Value: !Ref Assets
-    DistributionId:
-      Description: 'CloudFront Distribution ID'
-      Value: !Ref CloudFrontDistribution
-    Domain:
-      Description: 'Cloudfront Domain'
-      Value: !GetAtt CloudFrontDistribution.DomainName
+Outputs:
+  BucketName:
+    Description: 'S3 Bucket Name'
+    Value: !Ref Assets
+  DistributionId:
+    Description: 'CloudFront Distribution ID'
+    Value: !Ref Cloudfrontdistribution
+  Domain:
+    Description: 'Cloudfront Domain'
+    Value: !GetAtt Cloudfrontdistribution.DomainName
