@@ -28,6 +28,8 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["The AWS Serverless LAMP Stack: the Future of PHP or Vendor Lock-in?"](https://www.infoq.com/news/2020/07/aws-serverless-lamp/) -*Renato Losio*
 * ["The serverless LAMP stack – part 2 relational databases and RDS Proxy](https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/) -*Benjamin Smith*
 * ["The serverless LAMP stack – part 3 replacing the web server](https://aws.amazon.com/blogs/compute/the-serverless-lamp-stack-part-3-replacing-the-web-server/) -*Benjamin Smith & Matthieu Napoli*
+* ["The serverless LAMP stack -part 4 building a serverless Laravel application](https://aws.amazon.com/blogs/compute/the-serverless-lamp-stack-part-4-building-a-serverless-laravel-application/) -*Benjamin Smith*
+* ["The serverless LAMP stack – part 6 from MVC to serverless microservices](https://aws.amazon.com/blogs/compute/the-serverless-lamp-stack-part-6-from-mvc-to-serverless-microservices/) -*Benjamin Smith*
 * ["PHPUnit with Bref"](https://blog.deleu.dev/phpunit-with-bref/) -*Marco Aurélio Deleu*
 * ["Protect your RDS MySQL DB from AWS Lambda Scalability with RDS Proxy"](https://dev.to/nideveloper/protect-your-rds-mysql-db-from-aws-lambda-scalability-5d80) -*Matt Coulter*
 * ["Responding to SMS in PHP using AWS Lambda and Bref"](https://www.twilio.com/blog/responding-to-sms-in-php-using-aws-lambda-and-bref-php) -*Gary Hockin*
