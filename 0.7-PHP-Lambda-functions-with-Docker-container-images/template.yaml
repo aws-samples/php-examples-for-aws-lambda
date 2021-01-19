@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  ociphp2
+
+  Sample SAM Template for ociphp3
+  
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  myPHPLambdaFuncton:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      Events:
+        DynamicRequestsRoot:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: ANY
+        DynamicRequestsProxy:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+    Metadata:
+      DockerTag: phpoci
+      DockerContext: ./
+      Dockerfile: Dockerfile
+
+Outputs:
+  # ServerlessHttpApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  HelloWorldApi:
+    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
+  HelloWorldFunction:
+    Description: "Hello World Lambda Function ARN"
+    Value: !GetAtt myPHPLambdaFuncton.Arn
+  HelloWorldFunctionIamRole:
+    Description: "Implicit IAM Role created for Hello World function"
+    Value: !GetAtt myPHPLambdaFuncton.Arn
