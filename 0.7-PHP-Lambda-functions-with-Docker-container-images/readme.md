@@ -97,6 +97,10 @@ sam deploy -g
     ![sam-oci-output](../repository-resources/SamOciOutput.png)
 
 6. Send a POST request to the endpoint URL to invoke the Lambda function:
+```bash
+curl "https://n2s2asbh90.execute-api.eu-west-1.amazonaws.com" -d '{"queryStringParameters": {"name":"Ben"}}'
+```
+
 ![Post-Request-OCI](../repository-resources/finalLambdaOCI.png)
 
 ## Cleanup
