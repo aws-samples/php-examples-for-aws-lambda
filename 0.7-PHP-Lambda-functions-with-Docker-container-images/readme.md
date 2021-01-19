@@ -93,9 +93,11 @@ sam deploy -g
 * Keep the defaults for the remaining prompts:
 ![Sam-deploy-oci](../repository-resources/samDeployOci.png)
 
-5. The output displays the HTTP APIs endpoint:
-    ![sam-oci-output](../repository-resources/samOciOutput.png)
+5. The output displays the HTTP APIs endpoint url:
+    ![sam-oci-output](../repository-resources/SamOciOutput.png)
 
+6. Send a POST request to the endpoint URL to invoke the Lambda function:
+![Post-Request-OCI](../repository-resources/finalLambdaOCI.png)
 
 ## Cleanup
 
