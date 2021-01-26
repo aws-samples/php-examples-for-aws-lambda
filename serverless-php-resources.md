@@ -17,6 +17,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Authenticating AWS Cognito with Laravel"](https://blog.deleu.dev/authenticating-aws-cognito-with-laravel/) -*Marco Aurélio Deleu*
 * ["AWS Lambda With PHP Using Bref And Serverless Framework"](https://www.nexmo.com/blog/2020/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr) -*Adam Culp*
 * ["Bleeding Edge PHP on ZEIT Now"](https://dev.to/nx1/bleeding-edge-php-on-zeit-now-565g) -*Milan Felix Šulc*
+* ["Building PHP Lambda functions with Docker container images"](https://aws.amazon.com/blogs/compute/building-php-lambda-functions-with-docker-container-images/) -*Benjamin Smith*
 * ["Compiling wkhtmltopdf for use inside an AWS Lambda function with Bref is easier than you'd think"](https://tech.mybuilder.com/compiling-wkhtmltopdf-aws-lambda-with-bref-easier-than-you-think/) -*Neal Brooks*
 * ["Configure symfony for a serverless lambda environment in bref"](https://www.marco.zone/configure-symfony-for-serverless-lambda) -*Marco Pfeiffer*
 * ["Deploy s Symfony application in AWS Lambda"](https://medium.com/@smaine.milianni/aws-lambda-and-symfony-6d3e9831c3cd)-*Smaine Milianni*
