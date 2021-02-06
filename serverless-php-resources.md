@@ -24,6 +24,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Deploying Laravel Artisan on AWS Lambda"](https://blog.deleu.dev/deploying-laravel-artisan-on-aws-lambda/) -*Marco Aurélio Deleu*
 * ["Deploy Static Frontend + PHP Files Using ZEIT Now"](https://dev.to/nx1/deploy-static-frontend-php-files-using-zeit-now-mg) -*Milan Felix Šulc*
 * ["Going serverless with PHP"](https://medium.com/php-fad/going-serverless-with-php-f5a67cb3d67b) -*Koldo Picaza Rodríguez*
+* ["How to Run Docker Containers on AWS Lambda?"](https://medium.com/swlh/how-to-run-docker-containers-on-aws-lambda-c9bedd25fdf4) - *Jakub Kapuścik*
 * ["Introducing the CDK construct library for the Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-cdk-construct-library-for-the-serverless-lamp-stack/) -*Benjamin Smith*
 * ["Introducing the new Serverless LAMP stack"](https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/) -*Benjamin Smith*
 * ["The AWS Serverless LAMP Stack: the Future of PHP or Vendor Lock-in?"](https://www.infoq.com/news/2020/07/aws-serverless-lamp/) -*Renato Losio*
