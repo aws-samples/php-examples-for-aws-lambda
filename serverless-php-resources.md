@@ -14,6 +14,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 
 ## Articles/References
 
+* ["A monorepo approach to larger modules in Laravel and Lambda"](https://blog.deleu.dev/a-monorepo-approach-to-larger-modules-in-laravel-and-lambda/)
 * ["Authenticating AWS Cognito with Laravel"](https://blog.deleu.dev/authenticating-aws-cognito-with-laravel/) -*Marco Aurélio Deleu*
 * ["AWS Lambda With PHP Using Bref And Serverless Framework"](https://www.nexmo.com/blog/2020/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr) -*Adam Culp*
 * ["Bleeding Edge PHP on ZEIT Now"](https://dev.to/nx1/bleeding-edge-php-on-zeit-now-565g) -*Milan Felix Šulc*
