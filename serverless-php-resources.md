@@ -14,7 +14,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 
 ## Articles/References
 
-* ["A monorepo approach to larger modules in Laravel and Lambda"](https://blog.deleu.dev/a-monorepo-approach-to-larger-modules-in-laravel-and-lambda/)
+* ["A monorepo approach to larger modules in Laravel and Lambda"](https://blog.deleu.dev/a-monorepo-approach-to-larger-modules-in-laravel-and-lambda/) -*Marco Aurélio Deleu*
 * ["Authenticating AWS Cognito with Laravel"](https://blog.deleu.dev/authenticating-aws-cognito-with-laravel/) -*Marco Aurélio Deleu*
 * ["AWS Lambda With PHP Using Bref And Serverless Framework"](https://www.nexmo.com/blog/2020/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr) -*Adam Culp*
 * ["Bleeding Edge PHP on ZEIT Now"](https://dev.to/nx1/bleeding-edge-php-on-zeit-now-565g) -*Milan Felix Šulc*
@@ -44,6 +44,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Symfony Messenger on AWS Lambda"](https://developer.happyr.com/symfony-messenger-on-aws-lambda) -*Tobias Nyholm*
 * ["Une introduction au cloud et aux lambdas en PHP"](https://jolicode.com/blog/une-introduction-au-cloud-et-aux-lambdas-en-php) -*Loïck Piera*
 * ["Using AWS Lambda as a private Laravel API"](https://blog.deleu.dev/using-aws-lambda-as-a-private-laravel-api/) -*Marco Aurélio Deleu*
+* ["Using AWS KMS with Laravel"](https://blog.deleu.dev/swapping-laravel-encryption-with-aws-kms/) -*Marco Aurélio Deleu*
 * ["What is AWS Lambda, and how Laravel Vapor uses it"](https://dev.to/themsaid/what-is-aws-lambda-and-how-laravel-vapor-uses-it-1j98) -*Mohamed Said*
 
 ## Case studies
