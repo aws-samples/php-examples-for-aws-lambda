@@ -16,12 +16,12 @@ The following files and folders are included:
 ## Testing locally
 1.	Build the previous custom runtime image using the Docker build command:
 ```bash 
-docker build -t phpmyfuntion .
+docker build -t phpmyfunction .
 ```
 
 2. Run the function locally using the Docker run command, bound to port 9000:
 ```bash 
-docker run -p 9000:8080 phpmyfuntion:latest
+docker run -p 9000:8080 phpmyfunction:latest
 ```
 
 3. This command starts up a local endpoint at `localhost:9000/2015-03-31/functions/function/invocations`
