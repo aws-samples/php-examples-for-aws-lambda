@@ -10,7 +10,7 @@ The following files and folders are included:
   * [index.php](./0.7-PHP-Lambda-functions-with-Docker-container-images/src/index.php), a PHP Lambda function handler
 * [Dockerfile](./0.7-PHP-Lambda-functions-with-Docker-container-images/Dockerfile), a docker file containg commands to assemble an image for a custom Lambda runtime for PHP
 * [readme.md](./0.7-PHP-Lambda-functions-with-Docker-container-images/readme.md) This file.
-* [teamplte.yaml](./0.7-PHP-Lambda-functions-with-Docker-container-images/template.yaml) The application AWS SAM (serverless application model) template.
+* [template.yaml](./0.7-PHP-Lambda-functions-with-Docker-container-images/template.yaml) The application AWS SAM (serverless application model) template.
 
 
 ## Testing locally
