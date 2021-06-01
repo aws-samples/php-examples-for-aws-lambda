@@ -46,6 +46,7 @@ This community curated list of serverless/PHP resources helps likeminded PHP dev
 * ["Using AWS Lambda as a private Laravel API"](https://blog.deleu.dev/using-aws-lambda-as-a-private-laravel-api/) -*Marco Aurélio Deleu*
 * ["Using AWS KMS with Laravel"](https://blog.deleu.dev/swapping-laravel-encryption-with-aws-kms/) -*Marco Aurélio Deleu*
 * ["What is AWS Lambda, and how Laravel Vapor uses it"](https://dev.to/themsaid/what-is-aws-lambda-and-how-laravel-vapor-uses-it-1j98) -*Mohamed Said*
+* ["What it means to run a monolith on AWS Lambda"](https://blog.deleu.dev/what-it-means-to-run-a-monolith-on-aws-lambda/) -*Marco Aurélio Deleu*
 
 ## Case studies
 
