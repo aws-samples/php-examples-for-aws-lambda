@@ -84,7 +84,7 @@ aws iam create-policy \
         "secretsmanager:ListSecretVersionIds"
       ],
       "Resource": [
-        "<the-arn-of-the-secret>”
+        "<the-arn-of-the-secret>"
       ]
     },
     {
