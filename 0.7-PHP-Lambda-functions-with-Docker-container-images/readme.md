@@ -1,6 +1,6 @@
 # php-lambda-container-image-demo
 
-This project contains source code and supporting files for a serverless application that you can deploy with the AWS Serverless Application Model (AWS SAM) command line interface (CLI). It contains a custom runtime PHP Lambda function packaged as a docker contaier image. It deploys an Amazon HTTPs API endpoint to invoke the Lambda function. 
+This project contains source code and supporting files for a serverless application that you can deploy with the AWS Serverless Application Model (AWS SAM) command line interface (CLI). It contains a custom runtime PHP Lambda function packaged as a docker container image. It deploys an Amazon HTTPs API endpoint to invoke the Lambda function. 
 
 The following files and folders are included:
 
@@ -60,10 +60,10 @@ This [Dockerfile](./0.7-PHP-Lambda-functions-with-Docker-container-images/Docker
 
 ## Deploy the sample application
 
-1. Use the AWS CLI to create a new ECR repository to store the container image for the phpLambdaFuncton.
+1. Use the AWS CLI to create a new ECR repository to store the container image for the phpLambdaFunction.
 
 ```bash
-aws ecr create-repository --repository-name php-lambda-functon \
+aws ecr create-repository --repository-name php-lambda-function \
 --image-tag-mutability IMMUTABLE --image-scanning-configuration scanOnPush=true
 ```
 ![create-repository-output](../repository-resources/repositryUrl.png)
