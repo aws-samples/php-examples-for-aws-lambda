@@ -21,7 +21,7 @@
 //hello function
 function index($data)
 {
-    return APIResponse("Hello, ". $data['queryStringParameters']['name']);
+    return APIResponse("Hello, ". json_decode(base64_decode($data['body']), true)['queryStringParameters']['name']);
 }
 
 function APIResponse($body)
