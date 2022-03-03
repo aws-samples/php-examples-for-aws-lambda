@@ -27,10 +27,11 @@ docker run -p 9000:8080 phpmyfunction:latest
 3. This command starts up a local endpoint at `localhost:9000/2015-03-31/functions/function/invocations`
 
 
-4.	Post an event to this endpoint using a curl command. The Lambda function payload is provided by using the -d flag.  This is a valid Json object required by the Runtime Interface Emulator:
+4.	Post an event to this endpoint using a curl command. The Lambda function payload is provided by using the -d flag. Because API Gateway encodes the body in base64, we need to pipe the function payload through base64 and route that into our curl command, this way the php will function both locally and deployed.  This is a valid Json object required by the Runtime Interface Emulator:
 
 ```bash 
-curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{"queryStringParameters": {"name":"Ben"}}'
+(echo -n '{"body": "'; echo '{"queryStringParameters": {"name":"Ben"}}' | base64; echo '"}') |
+curl -d @-  http://localhost:9000/2015-03-31/functions/function/invocations
 ```
 
 5. A 200 status response is returned:
