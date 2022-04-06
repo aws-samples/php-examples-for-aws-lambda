@@ -54,7 +54,7 @@ Resources:
     Properties:
       Description: Lambda function to hosts entire application codebase
       CodeUri: .
-      Runtime: provided
+      Runtime: provided.al2 # the layer and runtime need to be the same
       Handler: index.php
       MemorySize: 1024
       Timeout: 30

@@ -39,7 +39,7 @@ Install [Bref](https://github.com/brefphp/bref) using either composer or docker;
 1. Composer:
 
   ```bash
-  composer require bref/bref
+  composer update
   ```
 
 2. Docker:
