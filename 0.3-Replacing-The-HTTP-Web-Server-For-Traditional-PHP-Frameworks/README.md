@@ -34,11 +34,20 @@ change to the correct directory:
 cd 0.3-Replacing-The-HTTP-Web-Server-For-Traditional-PHP-Frameworks
 ```
 
-Install [Bref](https://github.com/brefphp/bref) using Composer:
+Install [Bref](https://github.com/brefphp/bref) using either composer or docker;
 
-```bash
-composer require bref/bref
-```
+1. Composer:
+
+  ```bash
+  composer update
+  ```
+
+2. Docker:
+ 
+  ```bash
+  docker run --rm --interactive --tty --volume $PWD:/app composer update
+  ```
+
 
 Deploy the stack: This command uses SAM CLI, but you could also deploy with the [serverless framework](https://www.serverless.com/):
 

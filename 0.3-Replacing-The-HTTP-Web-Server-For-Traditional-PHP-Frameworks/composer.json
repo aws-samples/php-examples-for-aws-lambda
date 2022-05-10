@@ -1,0 +1,11 @@
+{
+    "config": {
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "require": {
+        "bref/bref": "^1.5",
+        "php": ">=8.1"
+    }
+}

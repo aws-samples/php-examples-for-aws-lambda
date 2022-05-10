@@ -11,12 +11,20 @@ Globals:
     
 Resources:
 ##########################################################################
+#  API Gateway with stage name                                           #
+##########################################################################  
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: dev
+
+##########################################################################
 #  S3 Bucket to store static assets                                      #
 ##########################################################################  
   Assets:
     Type: AWS::S3::Bucket
     Properties:
-        BucketName: php-example-assets-for-php-app-example-3
+        BucketName: !Sub 'cf-origin-${AWS::AccountId}-${AWS::StackName}'
    # The policy that makes the bucket publicly readable
   AssetsBucketPolicy: 
     Type: AWS::S3::BucketPolicy
@@ -46,22 +54,24 @@ Resources:
     Properties:
       Description: Lambda function to hosts entire application codebase
       CodeUri: .
-      Runtime: provided
+      Runtime: provided.al2 # the layer and runtime need to be the same
       Handler: index.php
       MemorySize: 1024
       Timeout: 30
       Tracing: Active
       Layers:
-        - 'arn:aws:lambda:us-east-1:209497400698:layer:php-73-fpm:25'
+        - !Sub 'arn:aws:lambda:${AWS::Region}:209497400698:layer:php-81-fpm:19'
       Events:
         DynamicRequestsRoot:
           Type: HttpApi
           Properties:
+            ApiId: !Ref HttpApi
             Path: /
             Method: ANY
         DynamicRequestsProxy:
           Type: HttpApi
           Properties:
+            ApiId: !Ref HttpApi
             Path: /{proxy+}
             Method: ANY
 ##########################################################################
@@ -74,7 +84,7 @@ Resources:
         Enabled: true 
         Origins:
             -   Id: Website  
-                DomainName: !Join ['.', [!Ref ServerlessHttpApi, 'execute-api', !Ref AWS::Region, 'amazonaws.com']]
+                DomainName: !Sub '${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}'
                 # This is the stage
                 OriginPath: "/dev"
                 CustomOriginConfig:
@@ -82,7 +92,8 @@ Resources:
         # The assets (S3)
             -   Id: Assets
                 DomainName: !GetAtt Assets.RegionalDomainName
-                S3OriginConfig: {} # this key is required to tell CloudFront that this is an S3 origin, even though nothing is configured
+                S3OriginConfig:
+                  OriginAccessIdentity: !Sub 'origin-access-identity/cloudfront/${S3OriginIdentityExample}'
         # The default behavior is to send everything to AWS Lambda
         DefaultCacheBehavior:
           AllowedMethods: [GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE]
