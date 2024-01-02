@@ -1,5 +1,5 @@
 
- <?
+<?
  /* Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this
@@ -19,7 +19,7 @@
 
 
 //hello function
-function index($data)
+function handler($data)
 {
     return APIResponse("Hello, ". $data['queryStringParameters']['name']);
 }

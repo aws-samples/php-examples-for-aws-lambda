@@ -60,45 +60,32 @@ This [Dockerfile](./0.7-PHP-Lambda-functions-with-Docker-container-images/Docker
 
 ## Deploy the sample application
 
-1. Use the AWS CLI to create a new ECR repository to store the container image for the phpLambdaFunction.
-
-```bash
-aws ecr create-repository --repository-name php-lambda-function \
---image-tag-mutability IMMUTABLE --image-scanning-configuration scanOnPush=true
-```
-![create-repository-output](../repository-resources/repositryUrl.png)
-
-Make a note of the repositoryUri as you need it in the next step.
-
-2. Authenticate the Docker CLI to your Amazon ECR registry.
-
-``` bash 
-aws ecr get-login-password --region {region} | docker login --username AWS --password-stdin {yourAccountID}.dkr.ecr.{region} .amazonaws.com    
-```
-3. Build the application locally
+1. Build the application locally
 ```bash 
 sam build
 ```
 
-4. Use the guided version of the sam deploy command and follow these steps:
+2. Use the guided version of the sam deploy command and follow these steps:
+(AWS SAM will create a new ECR repository to store the container image for the phpLambdaFunction)
 
 ```bash
 sam deploy -g
 ```
 * For Stack Name, enter my-php-lambda-container-demo.
-* Choose the same Region that you created the ECR repository in.
-* Enter the Image Repository for the HelloWorldFunction (this is the repositoryUri of the ECR repository).
+* Choose the region that you want to deploy to.
 * For Confirm changes before deploy and Allow SAM CLI IAM role creation, keep the defaults.
 * For HelloWorldFunction may not have authorization defined, Is this okay? Select Y.
 * Keep the defaults for the remaining prompts:
 ![Sam-deploy-oci](../repository-resources/samDeployOci.png)
 
-5. The output displays the HTTP APIs endpoint url:
+3. The output displays the HTTP APIs endpoint url:
     ![sam-oci-output](../repository-resources/SamOciOutput.png)
 
-6. Send a POST request to the endpoint URL to invoke the Lambda function:
+4. Send a POST request to the endpoint URL to invoke the Lambda function:
+(replace the api-gateway-url below with the value from the previous step)
+
 ```bash
-curl "https://n2s2asbh90.execute-api.eu-west-1.amazonaws.com" -d '{"queryStringParameters": {"name":"Ben"}}'
+curl "{api-gateway-url}?name=Ben"
 ```
 
 ![Post-Request-OCI](../repository-resources/finalLambdaOCI.png)
